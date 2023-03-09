@@ -1,0 +1,123 @@
+:root {
+    --gray-clr: #808080;
+    --white-clr: #fff;
+    --black-clr: #333;
+    --angle-right: "\f105";
+    --angle-left: "\f104";
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--gray-clr);
+    color: var(--white-clr);
+}
+
+.your-class {
+    position: relative;
+    max-width: 1000px;
+    margin: 1rem auto;
+}
+
+.card {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    transition: 0.3s;
+    width: 40%;
+}
+
+section {
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+section .card {
+    padding: 0 10px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.card img {
+    border-radius: 5px;
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.your-class button.slick-next,
+button.slick-prev,
+span.fa {
+    background-color: var(--black-clr);
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 40%;
+    transform: translate(0, -50%);
+    width: 10px;
+}
+
+button.slick-next,
+span.fa-angle-right {
+    right: -20px;
+}
+
+.fa-angle-right::before {
+    right: 2px;
+    position: relative;
+}
+
+.fa-angle-left::before {
+    left: -2px;
+    position: relative;
+}
+
+button.slick-prev,
+span.fa-angle-left {
+    left: -20px;
+    z-index: 1;
+}
+
+.your-class button.slick-disabled,
+span.slick-disabled {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.slick-dots li {
+    margin: 0 0.5rem;
+}
+
+.slick-dots li button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: var(--black-clr);
+    color: var(--white-clr);
+}
